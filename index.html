@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>탭메뉴_삼성전자:hover</title>
+	<link href="css/main.css" rel="stylesheet" />
+</head>
+<body>
+	<!-- 삼성전자 https://www.samsung.com/sec/-->
+	<section class="clearfixe">
+		<div class="title">
+			<h3>스토리#</h3>
+			<p>당신의 삶을 특별하게 해줄 새로운 아이디어<br />
+				스마트하게사는 새로운 방법을 알아보세요.</p>
+		</div><!-- .title end -->
+		
+		<ul class="tab_img">
+			<li class="on"><img src="img/visual01.webp" alt="" /></li>
+			<li><img src="img/visual02.webp" alt="" /></li>
+			<li><img src="img/visual03.webp" alt="" /></li>
+		</ul>
+		<ul class="tab_menu">
+			<li class="on">
+				<span>01</span>
+				#함께 만드는 더 나은 미래
+				<a href="#">더 알아보기</a>
+			</li>
+			<li>
+				<span>02</span>
+				#우리가 집에서 일하는 새로운 방법
+				<a href="#">더 알아보기</a>
+			</li>
+			<li>
+				<span>03</span>
+				#승리를 향한 완벽한 준비
+				<a href="#">더 알아보기</a>
+			</li>
+		</ul><!-- tab_menu end -->
+	</section>
+	<script src="lib/jquery-3.0.0.min.js"></script>
+	<script>
+		$(function(){
+			$('.tab_menu li').mouseover(function(){
+				$('.tab_menu li').removeClass('on');
+				$(this).addClass('on');
+				$('.tab_img li').removeClass('on');
+				$('.tab_img li').eq($(this).index()).addClass('on');
+
+			});
+		});
+	</script>
+</body>
+</html>
